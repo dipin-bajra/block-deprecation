@@ -1,55 +1,36 @@
 === Deprecated Block ===
-Contributors:      The WordPress Contributors
+Contributors:      Codemanas
 Tags:              block
 Tested up to:      6.1
 Stable tag:        0.1.0
 License:           GPL-2.0-or-later
 License URI:       https://www.gnu.org/licenses/gpl-2.0.html
 
-Example block scaffolded with Create Block tool.
 
-== Description ==
+== Testing ==
 
-This is the long description. No limit, and you can use Markdown (as well as in the following sections).
+1. 'git checkout 1.0.0/ 1.1.0/1.2.0' to switch between minor change version
+2. 'npm run start' to run the script
 
-For backwards compatibility, if this section is missing, the full length of the short description will be used, and
-Markdown parsed.
-
-== Installation ==
-
-This section describes how to install the plugin and get it working.
-
-e.g.
-
-1. Upload the plugin files to the `/wp-content/plugins/deprecated-block` directory, or install the plugin through the WordPress plugins screen directly.
-1. Activate the plugin through the 'Plugins' screen in WordPress
+[Note: The version should always be tested in ascending order version wise.]
 
 
-== Frequently Asked Questions ==
+== Change log ==
 
-= A question that someone might have =
+== 1.2.0 ==
+- Replaced the RichText with InnerBlocks
+- Replaced the content attribute with title
+- Deprecated code v2 added for 1.1.0 with the use of migration of content attribute
 
-An answer to that question.
+== 1.1.0 ==
+- Replaced the attribute text with content
+- Replaced the RichText tagName from p to div
+- Deprecated code v1 added for 1.0.0 with the use of migration of text attribute
 
-= What about foo bar? =
+== 1.0.0 ==
 
-Answer to foo bar dilemma.
+- Use of attribute 'text'
+- RichText used to display the content
 
-== Screenshots ==
 
-1. This screen shot description corresponds to screenshot-1.(png|jpg|jpeg|gif). Note that the screenshot is taken from
-the /assets directory or the directory that contains the stable readme.txt (tags or trunk). Screenshots in the /assets
-directory take precedence. For example, `/assets/screenshot-1.png` would win over `/tags/4.3/screenshot-1.png`
-(or jpg, jpeg, gif).
-2. This is the second screen shot
 
-== Changelog ==
-
-= 0.1.0 =
-* Release
-
-== Arbitrary section ==
-
-You may provide arbitrary sections, in the same format as the ones above. This may be of use for extremely complicated
-plugins where more information needs to be conveyed that doesn't fit into the categories of "description" or
-"installation." Arbitrary sections will be shown below the built-in sections outlined above.
