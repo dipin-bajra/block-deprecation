@@ -33,10 +33,11 @@ export default function Edit ({ attributes, setAttributes }) {
 
 	return (
 		<div {...useBlockProps()}>
+			{/*Replaced tag "p" with "div" and replaced attribute text with content */}
 			<RichText
-				tagName="p"
+				tagName="div"
 				onChange={(val) => setAttributes({ text: val })}
-				value={attributes.text}
+				value={attributes.content}
 			/>
 		</div>
 	)
