@@ -4,7 +4,7 @@
  *
  * @see https://developer.wordpress.org/block-editor/reference-guides/packages/packages-block-editor/#useblockprops
  */
-import { useBlockProps } from '@wordpress/block-editor';
+import { useBlockProps, RichText } from '@wordpress/block-editor';
 import { __ } from '@wordpress/i18n'
 
 /**
@@ -16,10 +16,13 @@ import { __ } from '@wordpress/i18n'
  *
  * @return {Element} Element to render.
  */
-export default function save() {
+export default function save({attributes}) {
 	return (
 		<div { ...useBlockProps.save()}>
-			<p>{__('This is a text', 'deprecated-block')}</p>
+			<RichText.Content
+				tagName= "p"
+				value={attributes.text}
+			/>
 		</div>
 	);
 }
