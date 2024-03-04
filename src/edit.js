@@ -11,7 +11,8 @@ import { __ } from '@wordpress/i18n'
  *
  * @see https://developer.wordpress.org/block-editor/reference-guides/packages/packages-block-editor/#useblockprops
  */
-import { useBlockProps, RichText } from '@wordpress/block-editor'
+import { useBlockProps } from '@wordpress/block-editor'
+import { InnerBlocks } from '@wordpress/block-editor'
 
 /**
  * Lets webpack process CSS, SASS or SCSS files referenced in JavaScript files.
@@ -33,11 +34,12 @@ export default function Edit ({ attributes, setAttributes }) {
 
 	return (
 		<div {...useBlockProps()}>
-			{/*Replaced tag "p" with "div" and replaced attribute text with content */}
-			<RichText
-				tagName="div"
-				onChange={(val) => setAttributes({ text: val })}
-				value={attributes.content}
+			{/*Replaced RichText with InnerBlocks and replaced attribute content with title */}
+			<InnerBlocks
+				onChange={(val) => setAttributes({ title: val })}
+				template={[
+					['core/paragraph', { content: attributes.title }],
+				]}
 			/>
 		</div>
 	)

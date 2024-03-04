@@ -25,4 +25,29 @@ const v1 = {
 	}
 }
 
-export default [v1]
+// This is the deprecated code from the 1.1.0 save.js, attributes and use of migrate because the content attribute was replaced with title
+const v2 = {
+	'attributes': {
+		'content': {
+			'type': 'string',
+			'default': 'Some content here!'
+		}
+	},
+	migrate ({ content }) {
+		return {
+			title: content,
+		}
+	},
+	save ({ attributes }) {
+		return (
+			<div {...useBlockProps.save()}>
+				<RichText.Content
+					tagName="div"
+					value={attributes.content}
+				/>
+			</div>
+		)
+	}
+}
+
+export default [v2, v1]

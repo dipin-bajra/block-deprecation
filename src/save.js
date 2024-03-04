@@ -4,7 +4,8 @@
  *
  * @see https://developer.wordpress.org/block-editor/reference-guides/packages/packages-block-editor/#useblockprops
  */
-import { useBlockProps, RichText } from '@wordpress/block-editor'
+import { useBlockProps } from '@wordpress/block-editor'
+import { InnerBlocks } from '@wordpress/block-editor'
 import { __ } from '@wordpress/i18n'
 
 /**
@@ -19,10 +20,7 @@ import { __ } from '@wordpress/i18n'
 export default function save ({ attributes }) {
 	return (
 		<div {...useBlockProps.save()}>
-			<RichText.Content
-				tagName="div"
-				value={attributes.content}
-			/>
+			<InnerBlocks.Content />
 		</div>
 	)
 }
