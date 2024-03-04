@@ -1,5 +1,3 @@
-import { useBlockProps, RichText } from '@wordpress/block-editor';
-
 const v1 = {
 }
 
