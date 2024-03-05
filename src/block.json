@@ -12,9 +12,9 @@
 		"html": false
 	},
 	"attributes": {
-		"title": {
+		"content": {
 			"type": "string",
-			"default": "Your title here!"
+			"default": "Some content here!"
 		}
 	},
 	"textdomain": "deprecated-block",

@@ -1,4 +1,5 @@
 import { useBlockProps, RichText } from '@wordpress/block-editor'
+import {createBlock} from '@wordpress/blocks'
 
 // This is the deprecated code from the 1.0.0 save.js, attributes and use of migrate because the text attribute was replace with content
 const v1 = {
@@ -33,10 +34,19 @@ const v2 = {
 			'default': 'Some content here!'
 		}
 	},
-	migrate ({ content }) {
-		return {
-			title: content,
-		}
+	migrate( attributes, innerBlocks ) {
+		const { content, ...restAttributes } = attributes;
+
+		return [
+			restAttributes,
+			[
+				createBlock( 'core/paragraph', {
+					content: attributes.content,
+					fontSize: 'large',
+				} ),
+				...innerBlocks,
+			],
+		];
 	},
 	save ({ attributes }) {
 		return (

@@ -34,11 +34,11 @@ export default function Edit ({ attributes, setAttributes }) {
 
 	return (
 		<div {...useBlockProps()}>
-			{/*Replaced RichText with InnerBlocks and replaced attribute content with title */}
+			{/*Replaced RichText with InnerBlocks */}
 			<InnerBlocks
-				onChange={(val) => setAttributes({ title: val })}
+				onChange={(val) => setAttributes({ content: val })}
 				template={[
-					['core/paragraph', { content: attributes.title }],
+					['core/paragraph', { content: attributes.content }],
 				]}
 			/>
 		</div>
