@@ -42,7 +42,6 @@ const v2 = {
 			[
 				createBlock( 'core/paragraph', {
 					content: attributes.content,
-					fontSize: 'large',
 				} ),
 				...innerBlocks,
 			],
