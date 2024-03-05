@@ -38,7 +38,7 @@ export default function Edit ({ attributes, setAttributes }) {
 			<InnerBlocks
 				onChange={(val) => setAttributes({ content: val })}
 				template = {[
-					['core/paragraph', { content: attributes.content }]
+					['core/paragraph', { placeholder: 'Type / to add blocks' }]
 				]}
 			/>
 		</div>
