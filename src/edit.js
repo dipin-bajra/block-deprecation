@@ -11,8 +11,8 @@ import { __ } from '@wordpress/i18n'
  *
  * @see https://developer.wordpress.org/block-editor/reference-guides/packages/packages-block-editor/#useblockprops
  */
-import { useBlockProps } from '@wordpress/block-editor'
-import { InnerBlocks } from '@wordpress/block-editor'
+import { useBlockProps, InnerBlocks } from '@wordpress/block-editor'
+import {  } from '@wordpress/block-editor'
 
 /**
  * Lets webpack process CSS, SASS or SCSS files referenced in JavaScript files.
@@ -37,9 +37,6 @@ export default function Edit ({ attributes, setAttributes }) {
 			{/*Replaced RichText with InnerBlocks */}
 			<InnerBlocks
 				onChange={(val) => setAttributes({ content: val })}
-				template ={
-					['core/paragraph', { content: attributes.content }]
-				}
 			/>
 		</div>
 	)
