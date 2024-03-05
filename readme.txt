@@ -19,8 +19,7 @@ License URI:       https://www.gnu.org/licenses/gpl-2.0.html
 
 == 1.2.0 ==
 - Replaced the RichText with InnerBlocks
-- Replaced the content attribute with title
-- Deprecated code v2 added for 1.1.0 with the use of migration of content attribute
+- Deprecated code v2 added for 1.1.0 with the use of migration of inner blocks and it's attribute
 
 == 1.1.0 ==
 - Replaced the attribute text with content
