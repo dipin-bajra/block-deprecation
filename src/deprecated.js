@@ -26,7 +26,7 @@ const v1 = {
 	}
 }
 
-// This is the deprecated code from the 1.1.0 save.js, attributes and use of migrate because the content attribute was replaced with title
+// This is the deprecated code from the 1.1.0 save.js, attributes and use of migrate for innerBlocks
 const v2 = {
 	'attributes': {
 		'content': {
