@@ -37,9 +37,6 @@ export default function Edit ({ attributes, setAttributes }) {
 			{/*Replaced RichText with InnerBlocks */}
 			<InnerBlocks
 				onChange={(val) => setAttributes({ content: val })}
-				template={[
-					['core/paragraph', { content: attributes.content }],
-				]}
 			/>
 		</div>
 	)
